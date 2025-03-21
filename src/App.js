@@ -1,32 +1,23 @@
 import React from "react";
-import Counter from "./components/1.Counter";
-import Greeting from "./components/2.Props";
-import Toggle from "./components/3.Toggle";
-import FormInput from "./components/4.Form";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 const App = () => {
   return (
-    <div>
-      <h3>Task 01</h3>
-          <Counter />
+    <Router>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+        </ul>
+      </nav>
 
-      <h3>Task 02</h3>
-          <Greeting name="Nigarish"/>
-
-      <h3>Task 03</h3>
-          <Toggle />
-
-      <h3>Task 04</h3>
-          <FormInput />
-          
-      <h3>Task 05</h3>
-      <h3>Task 06</h3>
-      <h3>Task 07</h3>
-      <h3>Task 08</h3>
-      <h3>Task 09</h3>
-      <h3>Task 10</h3>
-
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   );
 };
 
