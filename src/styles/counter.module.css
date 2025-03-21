@@ -1,0 +1,29 @@
+.heading{
+    color:brown;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button{
+    background-color: #31adcc;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: #f1f1f1;
+}
+
+.content{
+    text-align: center;
+}

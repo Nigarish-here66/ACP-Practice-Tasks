@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    background-color: #f1f1f1;
+}
+
+.button{
+    background-color: #31adcc;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.text{
+    font-size: 20px;
+    color: red;
+}
