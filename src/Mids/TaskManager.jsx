@@ -22,8 +22,8 @@ const TaskManager = () => {
 
   const completeTask = (index) => {
     setTasks(
-      tasks.map((task, i) =>
-        i === index ? { ...task, completed: !task.completed } : task
+      tasks.map((t, i) =>
+        i === index ? { ...t, completed: !t.completed } : t
       )
     );
   };
@@ -51,7 +51,13 @@ const TaskManager = () => {
           <div key={index} className="task-item">
             <span className={t.completed ? "completed" : ""}>{t.task}</span>
             <span className="assignee"> (Assigned to: {t.assignee})</span>
-            <button className="complete-button" onClick={() => completeTask(index)}>Complete</button>
+            <button
+              className="complete-button"
+              onClick={() => completeTask(index)}
+              disabled={t.completed}
+            >
+              {t.completed ? "Completed" : "Complete"}
+            </button>
             <button className="remove-button" onClick={() => removeTask(index)}>Remove</button>
           </div>
         ))}
