@@ -30,7 +30,9 @@ const TaskManager = () => {
 
   return (
     <div className="task-manager">
+
       <h2>My Task Manager</h2>
+
       <div className="input-container">
         <input
           type="text"
@@ -46,22 +48,25 @@ const TaskManager = () => {
         />
         <button className="add-button" onClick={addTask}>Add Task</button>
       </div>
+
       <div className="task-list">
         {tasks.map((t, index) => (
           <div key={index} className="task-item">
             <span className={t.completed ? "completed" : ""}>{t.task}</span>
             <span className="assignee"> (Assigned to: {t.assignee})</span>
+          
             <button
               className="complete-button"
               onClick={() => completeTask(index)}
-              disabled={t.completed}
-            >
+              disabled={t.completed}>
               {t.completed ? "Completed" : "Complete"}
             </button>
+
             <button className="remove-button" onClick={() => removeTask(index)}>Remove</button>
           </div>
         ))}
       </div>
+
     </div>
   );
 };
