@@ -3,7 +3,9 @@ import React from "react";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
 // import "./styles/Navbar.css";
-import TaskManager from "./Mids/TaskManager";
+// import TaskManager from "./Mids/TaskManager";
+import List from "./components/15.Childparent";
+import BudgetTracker from "./Mains/BudgetTracker";
 
 const App = () => {
   return (
@@ -22,7 +24,9 @@ const App = () => {
     // </Router>
 
     <div>
-      <TaskManager />
+      {/* <TaskManager /> */}
+      {/* <List /> */}
+      <BudgetTracker />
     </div>
   );
 };
